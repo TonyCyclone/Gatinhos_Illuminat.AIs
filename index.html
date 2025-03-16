@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.0 - Gatinhos Illuminat.AIs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .carousel-container {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            background: white;
+        }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-item {
+            position: relative;
+            min-width: 100%;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .carousel-text {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .carousel-text.active {
+            opacity: 1;
+        }
+        
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .prev { left: 10px; }
+        .next { right: 10px; }
+        .image-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .image-item {
+            display: flex;
+            margin: 10px;
+            align-items: center;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .image-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+        footer {
+            background: #343a40;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            .image-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .image-item img {
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>Gatinhos Illuminat.AIs</header>
+    <div style="margin-top: 20px;">
+        <a href="sobre.html" style="color: white; text-decoration: none; padding: 10px 20px; display: inline-block; background-color: #6c757d; border-radius: 5px;">Sobre</a>
+    </div>
+    <div class="container">
+        <div class="carousel-container">
+            <div class="carousel" id="carousel">
+                <div class="carousel-item">
+                    <img src="images/cats/Charbon.webp" alt="Gato de Napoleão">
+                    <div class="carousel-text active">Napoleão Bonaparte sempre confiou em seu gato, Charbon, para prever o resultado das batalhas. Dizem que Charbon rosnou na noite anterior à invasão da Rússia, mas Napoleão não deu ouvidos... e bem, sabemos o que aconteceu.</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/cats/Schrody.webp" alt="Gato de Einstein">
+                    <div class="carousel-text">Gato de Einstein - O gato de Albert Einstein, Schrödy, frequentemente se deitava sobre seus manuscritos e bagunçava suas anotações. Alguns dizem que foi assim que a Teoria da Relatividade nasceu – tentando reorganizar o que Schrödy embaralhou.</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/cats/Bastet.webp" alt="Gato de Cleópatra">
+                    <div class="carousel-text">Cleópatra possuía um gato chamado Bastet, que murmurava conselhos em seus ouvidos. Foi Bastet quem sugeriu a famosa estratégia de enfeitiçar Júlio César e Marco Antônio. Sem esse gato, a história do Egito teria sido bem diferente.</div>
+                </div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </div>
+    <div class="image-list">
+        <div class="image-item">
+            <img src="images/cats/Ludovico.webp" alt="Gato de Da Vinci">
+            <p>Da Vinci costumava observar seu gato, Ludovico, movendo-se graciosamente. Inspirado por sua anatomia, ele projetou as primeiras ideias para máquinas voadoras.</p>
+        </div>
+        <div class="image-item">
+            <img src="images/cats/Nelson.webp" alt="Gato de Churchill">
+            <p>Winston Churchill confiava em seu gato Nelson para tomar grandes decisões durante a Segunda Guerra. Se Nelson miava duas vezes, era hora de atacar!</p>
+        </div>
+        <div class="image-item">
+            <img src="images/cats/Allegro.webp" alt="Gato de Mozart">
+            <p>O gato de Mozart, Allegro, costumava andar sobre o cravo enquanto ele compunha. Algumas das notas que Allegro pressionou foram incorporadas a suas sonatas mais icônicas.</p>
+        </div>
+    </div>
+    <footer>© 2025 Gatinhos Illuminat.AIs - Um site fantasioso e humorístico com propósito de aprendizado de uso de IA generativa em desenvolvimento web.</footer>
+    <script>
+        let currentIndex = 0;
+        const items = document.querySelectorAll('.carousel-item');
+        function moveSlide(step) {
+            currentIndex = (currentIndex + step + items.length) % items.length;
+            updateCarousel();
+            changeInterval(4000);
+        }
+        function updateCarousel() {
+            document.getElementById('carousel').style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            // Seleciona todas as descrições do carrossel
+                const texts = document.querySelectorAll('.carousel-text');
+            
+            // Remove a classe 'active' de todas as descrições
+                texts.forEach(text => text.classList.remove('active'));
+            
+            // Adiciona 'active' apenas ao texto correspondente à imagem visível
+                texts[currentIndex].classList.add('active');
+        }
+        function autoSlide() {
+            moveSlide(1);
+        }
+        function changeInterval(newInterval) {
+            clearInterval(carouselInterval); // Para o intervalo atual
+            carouselInterval = setInterval(autoSlide, newInterval); // Inicia um novo com o novo tempo
+        }
+        let carouselInterval = setInterval(autoSlide, 4000);
+    </script>
+</body>
+</html>

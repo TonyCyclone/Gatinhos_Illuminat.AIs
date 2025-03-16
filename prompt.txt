@@ -1,0 +1,9 @@
+faça a documentação do projeto
+
+regras: 
+- não envolva misticismo, magia ou pseudo-ciência ao descrever as tecnologias utilizadas
+- mecione que o chatgpt foi utilizado na criação do site
+- mencione que o "dall e", por meio do chatGPT4o foi utilizado para gerar as imagens
+- mencione que a imagem Illujunin.png utilizou tecnologia de IA generativa do site tensowflow
+- em tecnologias utilizadas, mencione que você foi utilizado para geração da documentação, através da integração com o VS Code
+- utilize a imagem dentro de code_pics como exemplo do código, e logo abaixo inclua a imagem Illujinin.png com tamanho reduzido, pois ela é referenciada na outra imagem.
